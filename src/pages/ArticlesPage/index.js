@@ -5,7 +5,7 @@ import { Loading } from '../../components/Loading';
 
 const ArticlesResource = createResource(() => {
   return fetch(
-    'http://dev-reactclub.pantheonsite.io/jsonapi/node/article'
+    'https://dev-reactclub.pantheonsite.io/jsonapi/node/article'
   ).then(res => res.json());
 });
 
