@@ -1,0 +1,8 @@
+language: node_js
+node_js:
+  - "lts/*"
+
+install:
+  - echo $PATH
+  - echo $TRAVIS_PULL_REQUEST_SLUG
+
