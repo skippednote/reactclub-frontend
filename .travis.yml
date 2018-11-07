@@ -7,4 +7,4 @@ script:
   - yarn build
 after_success:
   - yarn bundlesize
-  - yarn lh  https://deploy-preview-$TRAVIS_PULL_REQUEST--reactclub.netlify.com
+  - yarn lh https://deploy-preview-$TRAVIS_PULL_REQUEST--reactclub.netlify.com
