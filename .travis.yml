@@ -1,5 +1,10 @@
 language: node_js
 node_js:
   - 10
-after_script:
+before_script:
+  - yarn add --dev https://github.com/ebidel/lighthouse-ci
+script:
+  - yarn build
+after_success:
   - yarn bundlesize
+  - yarn lh  https://deploy-preview-$TRAVIS_PULL_REQUEST--reactclub.netlify.com
