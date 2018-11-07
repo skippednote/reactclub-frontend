@@ -2,10 +2,10 @@ language: node_js
 node_js:
   - 10
 before_script:
-  - echo $TRAVIS_PULL_REQUEST
   - yarn global add netlify-cli
+  - yarn add --dev https://github.com/ebidel/lighthouse-ci
 script:
   - yarn build
-  - netlify deploy --prod --open --dir=build
-after_script:
-  - echo 'done'
+  - LH_URL=$(netlify deploy | grep 'Live Draft' | sed -e 's|Live Draft URL:||')
+after_success:
+  - yarn lh $LH_URL
