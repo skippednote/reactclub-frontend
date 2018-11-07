@@ -1,0 +1,11 @@
+language: node_js
+node_js:
+  - 10
+before_script:
+  - echo $TRAVIS_PULL_REQUEST
+  - yarn global add netlify-cli
+script:
+  - yarn build
+  - netlify deploy --prod --open --dir=build
+after_script:
+  - echo 'done'
