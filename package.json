@@ -22,5 +22,14 @@
     "not dead",
     "not ie <= 11",
     "not op_mini all"
+  ],
+  "devDependencies": {
+    "bundlesize": "^0.17.0"
+  },
+  "bundlesize": [
+    {
+      "path": "build/static/js/*.js",
+      "maxSize": "50kb"
+    }
   ]
 }
