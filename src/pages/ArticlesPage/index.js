@@ -14,7 +14,7 @@ function Articles() {
   return <ArticleList articles={articles} />;
 }
 
-export function ArticlesPage() {
+function ArticlesPage() {
   return (
     <div>
       <Suspense fallback={<Loading />}>
@@ -23,3 +23,5 @@ export function ArticlesPage() {
     </div>
   );
 }
+
+export default ArticlesPage;
