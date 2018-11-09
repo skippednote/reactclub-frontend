@@ -4,9 +4,9 @@ import { ArticleList } from '../../components/ArticleList';
 import { Loading } from '../../components/Loading';
 
 const ArticlesResource = createResource(() => {
-  return fetch(
-    'https://dev-reactclub.pantheonsite.io/jsonapi/node/article'
-  ).then(res => res.json());
+  return fetch(`${process.env.REACT_APP_BASE_URL}/jsonapi/node/article`).then(
+    res => res.json()
+  );
 });
 
 function Articles() {
