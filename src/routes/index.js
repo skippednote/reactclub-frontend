@@ -4,6 +4,7 @@ import { Loading } from '../components/Loading';
 
 const HomePage = lazy(() => import('../pages/HomePage'));
 const ArticlesPage = lazy(() => import('../pages/ArticlesPage'));
+const ArticlePage = lazy(() => import('../pages/ArticlePage'));
 
 export function Routes() {
   return (
@@ -11,6 +12,7 @@ export function Routes() {
       <Router>
         <HomePage path="/" />
         <ArticlesPage path="/articles" />
+        <ArticlePage path="/articles/:id" />
       </Router>
     </Suspense>
   );
